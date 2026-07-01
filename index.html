@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pour Aglaya - les verbes à préposition</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/styles.css?v=accent-clean-4">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#learn" aria-label="Pour Aglaya">
+      <span class="brand-mark">PA</span>
+      <span>
+        <strong>Pour Aglaya</strong>
+        <small>любимой ученице</small>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Navigation">
+      <a href="#learn">Учить</a>
+      <a href="#exceptions">Исключения</a>
+      <a href="#quiz">Тест</a>
+      <a href="#inversion">Инверсия</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="learn">
+      <div class="hero-art" aria-hidden="true">
+        <div class="book">
+          <span>à</span>
+          <span>de</span>
+          <span>pour</span>
+        </div>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Les verbes à préposition</p>
+        <h1>Запоминаем французские глаголы через примеры, перевод и проверку.</h1>
+        <p>Выбирай уровень, открывай перевод глазиком, кликай слова в примерах и проходи короткие задания. Каждый уровень содержит 20 глаголов.</p>
+      </div>
+    </section>
+
+    <section class="toolbar" aria-label="Выбор уровня">
+      <div>
+        <label for="levelSelect">Уровень</label>
+        <select id="levelSelect"></select>
+      </div>
+      <button id="shuffleBtn" class="icon-button" title="Перемешать карточки" aria-label="Перемешать карточки">
+        <span aria-hidden="true">↻</span>
+      </button>
+      <button id="showAllBtn" class="pill-button">Показать переводы</button>
+      <button id="hideAllBtn" class="pill-button secondary">Скрыть переводы</button>
+    </section>
+
+    <section class="progress-strip" aria-live="polite">
+      <div>
+        <span id="levelName">A0</span>
+        <strong id="levelCount">20 глаголов</strong>
+      </div>
+      <div class="meter" aria-hidden="true"><span id="scoreMeter"></span></div>
+      <div><strong id="scoreLabel">0%</strong> тест</div>
+    </section>
+
+    <section class="cards-grid" id="cardsGrid" aria-label="Карточки глаголов"></section>
+
+    <section class="panel exception-panel" id="exceptions">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Leçon spéciale</p>
+          <h2>naebka na yebka</h2>
+        </div>
+        <button id="checkExceptionsBtn" class="pill-button">Проверить ловушки</button>
+      </div>
+      <p class="lesson-note">Самые частые исключения и пары, где русский перевод обманывает. Запомни их как отдельные формулы, а не как дословный перевод.</p>
+      <div id="exceptionsGrid" class="exceptions-grid"></div>
+      <div class="result-line">
+        <span id="exceptionsResult">Выбери правильную французскую формулу в каждой ловушке.</span>
+        <button id="resetExceptionsBtn" class="pill-button secondary">Сбросить</button>
+      </div>
+    </section>
+
+    <section class="panel" id="quiz">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Test rapide</p>
+          <h2>Выбери правильный предлог</h2>
+        </div>
+        <button id="resetQuizBtn" class="pill-button secondary">Новый тест</button>
+      </div>
+      <div id="quizList" class="quiz-list"></div>
+      <div class="result-line">
+        <span id="quizResult">Ответь на вопросы, чтобы увидеть результат.</span>
+        <button id="checkQuizBtn" class="pill-button">Проверить</button>
+      </div>
+    </section>
+
+    <section class="panel" id="inversion">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Inversion</p>
+          <h2>Переведи русский пример на французский</h2>
+        </div>
+        <button id="resetInversionBtn" class="pill-button secondary">Очистить</button>
+      </div>
+      <div id="inversionList" class="inversion-list"></div>
+      <div class="result-line">
+        <span id="inversionResult">Пиши полный французский пример с правильным предлогом.</span>
+        <button id="checkInversionBtn" class="pill-button">Проверить</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="wordPopover" class="popover" role="status" aria-live="polite"></div>
+
+  <script src="./assets/app.js?v=accent-clean-4"></script>
+</body>
+</html>
